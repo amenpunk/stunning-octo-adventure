@@ -1,0 +1,9 @@
+.letra{
+    width:62px;
+    height:63px;
+    background-image: url("https://http2.mlstatic.com/abecedario-y-numeros-imantados-souvenirs-infantiles-D_NQ_NP_713509-MLA25739756337_072017-O.webp");
+    background-repeat: no-repeat;
+    display:inline-block;
+    margin-left: 7px;
+    margin-top: 7px;
+}
