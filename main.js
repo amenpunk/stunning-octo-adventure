@@ -1,6 +1,9 @@
+
+const bus = ["u","m","g"];
+
 window.onload = function () {
 
-    var letras = ['a', 'b', 'c', 'd', "e", 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', "n", "ñ", 'o', 'p', 'k', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    var letras = ['a', 'b', 'c', 'd', "e", 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', "n", "ñ", 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
     var posx = 0;
     var posy = 0;
@@ -10,7 +13,7 @@ window.onload = function () {
 
         var area = document.getElementById('area');
         var nuevaLetra = document.createElement('button');
-        nuevaLetra.innerHTML = letras[x];
+//        nuevaLetra.innerHTML = letras[x];
         nuevaLetra.classList.add(letras[x].value)
         nuevaLetra.className = 'letra';
 
@@ -42,10 +45,22 @@ window.onload = function () {
     }
 
     var cont = 0;
+    var index =0;
+
     lo = document.getElementsByTagName('button')
     while (cont < letras.length) {
         lo[cont].onclick = function () {
-            console.log(this.name);
+            factor = this.name;
+            console.log(factor);
+            if(factor === bus[index] ){
+                index++;
+                if(index === bus.length){
+                    alert("ENCONTRASTE UMG !!");
+                }
+            }else{
+                index=0;
+            }
+            
         }
         cont++;
     }
